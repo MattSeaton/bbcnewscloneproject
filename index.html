@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>BBC News - Technology</title>
+
+    <style>
+        /*=====
+RESET
+=======*/
+        /* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+        html,
+        body,
+        div,
+        span,
+        applet,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        a,
+        abbr,
+        acronym,
+        address,
+        big,
+        cite,
+        code,
+        del,
+        dfn,
+        em,
+        img,
+        ins,
+        kbd,
+        q,
+        s,
+        samp,
+        small,
+        strike,
+        strong,
+        sub,
+        sup,
+        tt,
+        var,
+        b,
+        u,
+        i,
+        center,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td,
+        article,
+        aside,
+        canvas,
+        details,
+        embed,
+        figure,
+        figcaption,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        output,
+        ruby,
+        section,
+        summary,
+        time,
+        mark,
+        audio,
+        video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        /* HTML5 display-role reset for older browsers */
+
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section {
+            display: block;
+        }
+
+        body {
+            line-height: 1.4;
+        }
+
+        ol,
+        ul {
+            list-style: none;
+        }
+
+        blockquote,
+        q {
+            quotes: none;
+        }
+
+        blockquote:before,
+        blockquote:after,
+        q:before,
+        q:after {
+            content: '';
+            content: none;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        /*========
+TYPOGRAPHY
+=========*/
+
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            box-sizing: border-box;
+        }
+
+        header .nav1st li a {
+            color: black;
+        }
+
+        header .nav2nd li a,
+        header .nav2nd li {
+            color: white;
+            font-size: 14px;
+            font: Helvetica;
+            line-height: 17px;
+        }
+        main {
+            font-size: 14px;
+
+        }
+
+        h1 {
+            font-size: 32px;
+            line-height: 36px;
+            font-weight: bold;
+            color: black;
+        }
+        h2 {
+            font-size: 20px;
+            line-height: 24px;
+            font-weight: bold;
+            color: black;
+        }
+        h3 {
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: bold;
+            color: black;
+
+        }
+        h5 {
+            font-size: 18px;
+        line-height: 22px;
+        font-weight: bold;
+        color: black;
+
+        }
+
+        .asidetitle {
+            font-size: 24px;
+            color: black;
+        }
+
+        .title {
+            font-size: 20px;
+            line-height: 24px;
+        }
+
+        .timesection {
+            color: #404040;
+            font-size: 14px;
+            line-height: 16px;
+        }
+
+        h4 {
+            display: inline-block;
+            border-right: 1px solid #e4e4e4;
+            padding-right: 5px;
+        }
+
+        .film a {
+            color: black;
+            font-weight: bold;
+        }
+
+        .timesection a {
+            color: #bb1919;
+            font-weight: normal;
+            font-size: 13px;
+            line-height: 16px;
+            display: inline-block;
+            margin-top: 8px;
+        }
+        /*========
+links
+==========*/
+
+        a {
+            text-decoration: none;
+            color: #7d7d7d;
+        }
+
+        a:hover, h1:hover, h2:hover, h3:hover, h5:hover {
+            color: #1167a8;
+        }
+
+
+
+        .nav2nd li a:hover {
+            border-bottom: 3px solid white;
+        }
+
+        .nav1st li a:hover {
+            border-bottom: 3px solid black;
+        }
+        /*======
+NAV
+========*/
+
+        .nav1st ul {
+            width: 960px;
+            text-align: center;
+            font-size: 13px;
+            font-style: Arial;
+            font-weight: bold;
+            border-top: 3px solid white;
+            border-bottom: 3px solid white;
+            margin: 0px auto 0px auto;
+        }
+
+        #bell {
+            margin:5px;
+        }
+        .nav1st li {
+
+            display: inline;
+
+            border-left: solid 1px #e4e4e4;
+        }
+
+        .nav1st li:first-child {
+            position: relative;
+            right: 55px;
+        }
+
+        .nav1st li:last-child {
+            position: relative;
+            left: 55px;
+        }
+
+        .nav1st li a {
+            padding: 10px 15px 10px 15px;
+        }
+
+        input#search {
+            background-image: url(assets/magnifier.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: right;
+            background-color: #e4e4e4;
+        }
+
+        .banner {
+            text-align: center;
+            height: auto;
+            overflow: hidden;
+            background-color: #bb1919;
+            padding: 10px;
+        }
+
+        .container_full {
+            width: 960px;
+            margin: auto;
+        }
+
+        #maintitle {
+            float: left;
+        }
+
+        button img {
+            float:right;
+            vertical-align: middle;
+
+        }
+        #buttontext {
+
+        }
+
+        .banner button {
+            background-color: #bb1919;
+            float: right;
+            color: white;
+            border: 0.1px solid #e4e4e4;
+            font-size: 19px;
+
+            margin: auto 0px auto 0px;
+        }
+
+        .nav2nd {
+            text-align: center;
+            background-color: #a91717;
+            height: auto;
+            border-top: 3px solid #a91717;
+            border-bottom: 3px solid #a91717;
+        }
+
+        .nav2nd li {
+            display: inline;
+            background-color: #a91717;
+            clear: left;
+            height: auto;
+            border-left: solid 1px #e4e4e4;
+        }
+
+        .nav2nd li a {
+            padding: 5px 10px;
+        }
+        /*=====
+main
+=====*/
+
+        main {
+            width: 960px;
+            margin: auto;
+        }
+
+        .col2of3 {
+            width: 645px;
+            padding-top: 16px;
+            padding-right: 16px;
+            float: left;
+        }
+
+        .aside {
+            padding-top: 16px;
+            padding-left: 16px;
+
+        }
+
+        .title {
+            padding-top: 8px;
+            border-bottom: 3px solid #a91717;
+            margin: 0;
+            width: min-content;
+        }
+
+        .headline {
+            border-right: 1px solid #e4e4e4;
+            border-bottom: 1px solid #e4e4e4;
+            padding-bottom: 10px;
+            height:266px;
+        }
+
+        #headlabel {
+            width: 230px;
+            float: left;
+        }
+
+        .headline img {
+            width: 400px;
+            float: left;
+        }
+
+
+
+
+        .secondary-stories {
+            float: left;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .secondary-stories img {
+            width: 215px;
+        }
+
+        .reporter {
+            float: left;
+        }
+        .questions {
+            margin-top: 10px;
+        }
+
+        #davelee {
+            float: right;
+            width: 46px;
+            border-radius: 23px;
+        }
+
+        #oneof3 {
+            width: 215px;
+            padding-right: 32px;
+            float: left;
+        }
+
+        #twoof3 {
+            width: 215px;
+            padding-right: 32px;
+            float: left;
+        }
+
+        #threeof3 {
+            width: 149px;
+            float: left;
+        }
+
+        .seconds {
+            padding-top: 8px;
+        }
+        .smaller2nds{
+            margin: 0px 0 72px 0;
+            padding-top: 8px;
+
+
+        }
+
+        .tertiary-stories {
+            clear: left;
+        }
+
+        #TS1of2 {
+            width: 320px;
+            float: left;
+        }
+
+        #TS2of2 {
+            width: 320px;
+            float: left;
+        }
+
+        .aside img {
+            width: 109px;
+            height: 61px;
+        }
+
+
+        .film {
+            display: flex;
+            align-items: flex-start;
+            padding: 8px 0px 8px 0px;
+        }
+
+        .filmlabel {
+            padding-left: 8px;
+        }
+        .shares {
+            margin-top: 22px;
+            margin-bottom: 16px;
+        }
+        .shares img {
+            height: 20px;
+            width: 20px;
+            vertical-align: middle;
+}
+        .social-media {
+            margin-top: 22px;
+        }
+        /*====
+        social media buttons
+        =====*/
+        #fb, #twt, #rss {
+            background-color: #f7f7f7;
+            border-style: none;
+            height: 40px;
+
+        }
+
+        #fb {
+            width: 135px;
+            border-bottom: 3px solid #3c5a98;
+        }
+
+        #twt {
+            width: 135px;
+            border-bottom: 3px solid #47c7fa;
+        }
+
+        #rss {
+            width:270px;
+            border-bottom: 3px solid black;
+        }
+
+        .elsewhere {
+            margin-top: 22px;
+        }
+
+    </style>
+</head>
+
+
+<body>
+    <header>
+        <div class="nav nav1st">
+            <ul>
+                <li><img src="assets/bbc-blocks-dark.png" width="84" height="24" alt="BBC"></li>
+                <li><a href="https://account.bbc.com/signin"><img src="assets/002-user.svg" width="20px" height="20px" alt="">  Sign in&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                <li><img src="assets/bell.png" id="bell" alt="bell"></li>
+                <li><a href="http://www.bbc.co.uk/news/0">News</a></li>
+                <li><a href="http://www.bbc.co.uk/sport">Sport</a></li>
+                <li><a href="http://www.bbc.co.uk/weather/">Weather</a></li>
+                <li><a href="http://www.bbc.co.uk/iplayer">iPlayer</a></li>
+                <li><a href="http://www.bbc.co.uk/tv">Tv</a></li>
+                <li><a href="http://www.bbc.co.uk/radio">Radio</a></li>
+                <li>More &#9662;</li>
+                <li><input type="text" id="search" name="search" value="" placeholder="Search&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"></li>
+
+            </ul>
+
+        </div>
+        <div class="banner">
+            <div class="container_full">
+
+                <img id="maintitle" src="assets/news-light.png" alt="news">
+
+
+                <button type="button" name="button">Find Local News<img src="assets/pin.png" alt=""></button>
+            </div>
+        </div>
+        <div class="nav nav2nd">
+            <ul>
+                <li><a href="http://www.bbc.co.uk/news/0">Home</a></li>
+                <li><a href="http://www.bbc.co.uk/news/uk">UK</a></li>
+                <li><a href="http://www.bbc.co.uk/news/world">World</a></li>
+                <li><a href="http://www.bbc.co.uk/news/business">Business</a></li>
+                <li><a href="http://www.bbc.co.uk/news/election/2017">Election 2017</a></li>
+                <li><a href="http://www.bbc.co.uk/news/technology">Tech</a></li>
+                <li><a href="http://www.bbc.co.uk/news/science_and_environment">Science</a></li>
+                <li><a href="http://www.bbc.co.uk/news/health">Health</a></li>
+                <li><a href="http://www.bbc.co.uk/news/education">Education</a></li>
+                <li><a href="http://www.bbc.co.uk/news/entertainment_and_arts">Entertainment &amp; Arts</a></li>
+                <li><a href="http://www.bbc.co.uk/news/video_and_audio/headlines/39945901/protesters-injured-outside-turkish-embassy-in-washington">Video &amp; Audio</a></li>
+                <li>More &#9662;</li>
+            </ul>
+
+        </div>
+
+    </header>
+    <main>
+        <div>
+            <div class="title">
+                Technology
+            </div>
+
+        </div>
+        <div class="col2of3">
+            <div class="headline">
+
+                <div id="headtitle">
+                    <a href="http://www.bbc.co.uk/news/technology-39934316"><h1>NHS criticised over deal with DeepMind</h1></a>
+                </div>
+                <div id="headlabel">
+
+
+                    <p class="story">A leaked letter throws doubt on the legal masis for sharing 1.6 million patient records with DeepMind.</p>
+                    <div class="timesection">
+                        <h4>&#128339;&nbsp;&nbsp;&nbsp;31 minutes ago</h4>
+                        <a href="http://www.bbc.co.uk/news/technology">Technology</a>
+                    </div>
+                    <a class="questions" href="http://www.bbc.co.uk/news/technology-39301901"><h3>Google DeepMind's NHS deal under scrutiny</h3></a>
+                    <a class="questions" href="http://www.bbc.co.uk/news/technology-37439221"><h3>Should patients trust Google with data?</h3></a>
+                </div>
+
+                <div id="headimg">
+
+
+
+                    <a href="http://www.bbc.co.uk/news/technology-39934316"><img src="assets/_96072736_nhsstreams.gif" alt="Nurses using a smartphone"></a>
+
+                </div>
+
+            </div>
+            <div class="secondary-stories">
+                <div class="seconds" id="oneof3">
+                    <a href="http://www.bbc.co.uk/news/technology-39931635"><img src="assets/_96068963_istock-488808075.jpg" alt="Virus alert handprint"></a>
+                    <a href="http://www.bbc.co.uk/news/technology-39931635"><h2>N Korea link suspected in cyber-attack</h2></a>
+                    <p class="story">Experts see apparent similarities between Wanncry and earlier hacks by a suspected North Korea-linked group.</p>
+                    <div class="reporter">
+                        <p><strong>Dave Lee</strong><br>
+                        North America technology reporter</p>
+                    </div>
+                    <img src="assets/davelee.png" id="davelee" alt="Portrait of Dave Lee the reporter">
+                    <div class="timesection">
+
+
+                        <h4>&#128339; &nbsp;&nbsp;&nbsp;3 hours ago</h4>
+                        <a href="http://www.bbc.co.uk/news/technology">Technology</a>
+                    </div>
+                    <div class="questions">
+
+
+                        <a href="http://www.bbc.co.uk/news/technology-39924318">Global manhunt for WannCry creators</a><br>
+                        <a href="http://www.bbc.co.uk/newsround/39896362">Your questions on the hack answered</a>
+                    </div>
+                </div>
+                <div class="seconds" id="twoof3">
+                    <a href="http://www.bbc.co.uk/news/technology-39928456"><img src="assets/_96072314_gettyimages-578296274.jpg" alt="Binary data exposion"></a>
+                    <a href="http://www.bbc.co.uk/news/technology-39928456"><h2>WannCry and the malware hall of fame</h2></a>
+                    <a href="http://www.bbc.co.uk/news/technology-39928456">How does WannCry compare with other big malware infections?</a>
+                    <div class="timesection">
+                        <h4>&#128339; &nbsp;&nbsp;&nbsp;38 minutes ago</h4>
+                        <a href="http://www.bbc.co.uk/news/technology">Technology</a>
+                    </div>
+                    <div class="questions">
+                    <a href="http://www.bbc.co.uk/news/technology-39920269">Should you pay the WannaCry ransom?</a>
+                </div>
+
+                </div>
+                <div id="threeof3">
+                    <div class="smaller2nds">
+                        <a href="http://www.bbc.co.uk/news/av/technology-39929408/htc-unveils-squeezy-phone-for-selfies"><h5>HTC unveils 'squeezy' phone for selfies</h5></a>
+
+                        <div class="timesection">
+                            <h4>&#128339; &nbsp;&nbsp;&nbsp;5 hours ago</h4>
+                            <a href="http://www.bbc.co.uk/news/technology">Technology</a>
+                        </div>
+                    </div>
+                    <div class="smaller2nds">
+                        <a href="http://www.bbc.co.uk/news/world-europe-39934666"><h5>Ukraine to block Russian social networks</h5></a>
+                        <div class="timesection">
+                            <h4>&#128339; &nbsp;&nbsp;&nbsp;2 hours ago</h4>
+                            <a href="http://www.bbc.co.uk/news/world/asia/europe">Europe</a>
+                        </div>
+                    </div>
+                    <div class="smaller2nds">
+                        <a href="http://www.bbc.co.uk/news/world-asia-india-39931556"><h5>Indian teenager builds 'lightest satellite</h5></a>
+                        <div class="timesection">
+                            <h4>&#128339; &nbsp;&nbsp;&nbsp;7 hours ago</h4>
+                            <a href="http://www.bbc.co.uk/news/world/asia/india">India</a>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div class="tertiary-stories">
+                <div id="TS1of2">
+
+
+                    <div>
+                        <a href="http://www.bbc.co.uk/news/world-asia-39931816"><h3>Thailand backs off Faceboook ban threat</h3></a>
+                        <div class="timesection">
+                            <h4>&#128339; &nbsp;&nbsp;&nbsp;41 minutes ago</h4>
+                            <a href="http://www.bbc.co.uk/news/asia">Asia</a>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="http://www.bbc.co.uk/news/technology-39920269"><h3>Should you pay the WannaCry ransom?</h3></a>
+                        <div class="timesection">
+                            <h4>&#128339; &nbsp;&nbsp;&nbsp;2 hours ago</h4>
+                            <a href="http://www.bbc.co.uk/news/technology">Technology</a>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="http://www.bbc.co.uk/news/uk-39918426"><h3>No 'second spike' in NHS cyber-attack</h3></a>
+                        <div class="timesection">
+                            <h4>&#128339; &nbsp;&nbsp;&nbsp;7 hours ago</h4>
+                            <a href="http://www.bbc.co.uk/news/uk">UK</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div id="TS2of2">
+
+
+                    <div>
+                        <a href="http://www.bbc.co.uk/news/technology-39924318"><h3>Global manhunt for WannCry creators</h3></a>
+                        <div class="timesection">
+                            <h4>&#128339; &nbsp;&nbsp;&nbsp;3 hours ago</h4>
+                            <a href="http://www.bbc.co.uk/news/technology">Technology</a>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="http://www.bbc.co.uk/news/technology-39896389"><h3>Virtual memorial for WW2 code-cracker</h3></a>
+                        <div class="timesection">
+                            <h4>&#128339; &nbsp;&nbsp;&nbsp;10 hours ago</h4>
+                            <a href="http://www.bbc.co.uk/news/technology">Technology</a>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="http://www.bbc.co.uk/news/business-39930132"><h3>Uber must return 'pilfered' files to Waymo</h3></a>
+                        <div class="timesection">
+                            <h4>&#128339; &nbsp;&nbsp;&nbsp;8 hours ago</h4>
+                            <a href="http://www.bbc.co.uk/news/business">Business</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="aside">
+            <div class="videos">
+                <p class="asidetitle">Watch/Listen</p>
+                <div class="film">
+
+                    <a href="http://www.bbc.co.uk/news/av/world-asia-39872650/a-great-grandmother-from-india-is-winning-hearts-with-her-cooking-videos"><img src="assets/old lady.jpg" alt="An old indian lady"></a>
+
+                    <div class="filmlabel">
+
+
+                        <a href="http://www.bbc.co.uk/news/av/world-asia-39872650/a-great-grandmother-from-india-is-winning-hearts-with-her-cooking-videos">Is this the world's oldest Youtube star?</a>
+
+                        <div class="timesection">
+                            <h4>&#128339; &nbsp;&nbsp;&nbsp;15 May 2017</h4>
+                            <a href="http://www.bbc.co.uk/news/world/asia/india">India</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="film">
+
+                    <a href="http://www.bbc.co.uk/news/av/uk-scotland-39928160/watch-what-happens-when-ransomware-hits"><img src="assets/computer.jpg" alt="A man typing at a computer"></a>
+
+                    <div class="filmlabel">
+                        <a href="http://www.bbc.co.uk/news/av/uk-scotland-39928160/watch-what-happens-when-ransomware-hits">Watch what happens when ransomware hits</a>
+
+                        <div class="timesection">
+                            <h4>&#128339; &nbsp;&nbsp;&nbsp;15 May 2017</h4>
+                            <a href="http://www.bbc.co.uk/news/scotland">Scotland</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="film">
+
+                    <a href="http://www.bbc.co.uk/news/av/technology-39857917/could-these-mini-reactors-replicate-the-power-of-the-sun"><img src="assets/reactor.jpg" alt="nuclear reactor"></a>
+
+                    <div class="filmlabel">
+                        <a href="http://www.bbc.co.uk/news/av/technology-39857917/could-these-mini-reactors-replicate-the-power-of-the-sun">Could mini reactors replicate Sun's power?</a>
+
+                        <div class="timesection">
+                            <h4>&#128339; &nbsp;&nbsp;&nbsp;15 May 2017</h4>
+                            <a href="http://www.bbc.co.uk/news/technology">Technology</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="film">
+
+                    <a href="http://www.bbc.co.uk/news/av/technology-39921279/cyber-attack-security-minister-says-xp-issue-a-red-herring"><img src="assets/man in suit.jpg" alt="man in a suit"></a>
+
+                    <div class="filmlabel">
+                        <a href="http://www.bbc.co.uk/news/av/technology-39921279/cyber-attack-security-minister-says-xp-issue-a-red-herring">Cyber-attack: XP issue a 'red herring'</a>
+
+                        <div class="timesection">
+                            <h4>&#128339; &nbsp;&nbsp;&nbsp;15 May 2017</h4>
+                            <a href="http://www.bbc.co.uk/news/technology">Technology</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="film">
+
+                    <a href="http://www.bbc.co.uk/news/av/technology-39870910/new-health-scan-uses-artificial-intelligence"><img src="assets/bodyscan.jpg" alt="A bodyscan"></a>
+
+                    <div class="filmlabel">
+                        <a href="http://www.bbc.co.uk/news/av/technology-39870910/new-health-scan-uses-artificial-intelligence">Health scan uses artificial intelligence</a>
+
+                        <div class="timesection">
+                            <h4>&#128339; &nbsp;&nbsp;&nbsp;15 May 2017</h4>
+                            <a href="http://www.bbc.co.uk/news/technology">Technology</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="film">
+
+                    <a href="http://www.bbc.co.uk/news/av/technology-39913487/cyber-attack-firms-must-patch-before-monday-morning"><img src="assets/maninsuit2.jpg" alt="A bodyscan"></a>
+
+                    <div class="filmlabel">
+                        <a href="http://www.bbc.co.uk/news/av/technology-39913487/cyber-attack-firms-must-patch-before-monday-morning">Firms 'must patch before Monday morning'</a>
+
+                        <div class="timesection">
+                            <h4>&#128339; &nbsp;&nbsp;&nbsp;14 May 2017</h4>
+                            <a href="http://www.bbc.co.uk/news/technology">Technology</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            <div class="shares">
+                <a class="asidetitle" href="http://www.bbc.co.uk/news/have_your_say">Share with BBC News</a>
+                <ul>
+                    <li><img src="assets/smartphone.png" alt="Mobile Phone"> Send an SMS or MMS to 61124</li>
+                    <li><img src="assets/envelope.png" alt="Envelope icon"> Email us at <strong>haveyoursay@bbc.co.uk</strong></li>
+                    <li><img src="assets/birdy.png" alt="Twitter symbol"> Follow Have Your Say on <strong>Twitter</strong></li>
+                </ul>
+
+            </div>
+            <div class="social-media">
+                <p class="asidetitle">Follow Us</p>
+                <button type="button" name="button" id="fb">Facebook</button>
+                <button type="button" name="button" id="twt">Twitter</button>
+                <button type="button" name="button" id="rss">RSS News Feed</button>
+
+            </div>
+            <div class="elsewhere">
+                <p class="asidetitle">Elsewhere on the BBC<p>
+                <a href="http://www.bbc.co.uk/programmes/p0529xvr?intc_type=promo&intc_location=news&intc_campaign=clusterheadaches&intc_linkname=bbcone_fac_vidclip"><img src="assets/headaches.jpg" alt="A Doctor"></a>
+                <a href="http://www.bbc.co.uk/programmes/p0529xvr?intc_type=promo&intc_location=news&intc_campaign=clusterheadaches&intc_linkname=bbcone_fac_vidclip">Cluster Headaches</a>
+                <p>The Doctor in the house tries to help a sufferer</p>
+
+            </div>
+
+        </div>
+
+    </main>
+    <footer>
+
+    </footer>
+
+
+
+</body>
+
+
+</html>
